@@ -20,5 +20,15 @@ public class BuilderJavaTestGround {
         unknownThingJava.print();
         cuteThingJava.print();
         dangerThingJava.print();
+
+        ThingJavaLombok lombokThingJava = ThingJavaLombok.builder()
+                .name("Cutie")
+                .weight(5)
+                .feature("Very sweet")
+                .dangerousness(0)
+                .build();
+
+        System.out.println(lombokThingJava);
+
     }
 }

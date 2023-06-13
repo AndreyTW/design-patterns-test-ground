@@ -11,12 +11,15 @@ repositories {
     mavenCentral()
 }
 
+val lombokVersion: String by project
 val junitVersion: String by project
 val mockitoVersion: String by project
 val mockitoKotlinVersion: String by project
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    implementation("org.projectlombok:lombok:$lombokVersion")
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
